@@ -35,7 +35,7 @@ const PostGraduateCourseForm = () => {
 
   const fetchPrograms = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/programs2"); // Replace with your backend URL
+      const response = await axios.get("https://organised-web-backend.onrender.com/api/programs2"); // Replace with your backend URL
       setPrograms(response.data);
     } catch (error) {
       console.error("Error fetching programs:", error);
