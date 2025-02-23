@@ -51,7 +51,7 @@ const PostGraduateCourseForm = () => {
     formData.append("image", data.image[0]);
   
     try {
-      await axios.post("http://localhost:3000/api/programs2", formData, {
+      await axios.post("https://organised-web-backend.onrender.com/api/programs2", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       reset(); // Reset form fields
