@@ -34,7 +34,7 @@ const TeacherWidget = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      await axios.post("http://localhost:3000/api/add-teachers/add", data);
+      await axios.post("https://organised-web-backend.onrender.com/api/add-teachers/add", data);
       alert("Teacher added successfully!");
       reset(); // Reset form after successful submission
     } catch (error) {
