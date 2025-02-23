@@ -10,7 +10,7 @@ const TeacherList = () => {
   useEffect(() => {
     const fetchTeachers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/add-teachers/get");
+        const response = await axios.get("https://organised-web-backend.onrender.com/api/add-teachers/get");
         setTeachers(response.data.teachers);
         setFilteredTeachers(response.data.teachers); // Initialize filtered list
       } catch (error) {
@@ -35,7 +35,7 @@ const TeacherList = () => {
 const handleDelete = async (id) => {
   try {
     await axios.delete(
-      `http://localhost:3000/api/add-teachers/delete-teacher/${id}`
+      `https://organised-web-backend.onrender.com/api/add-teachers/delete-teacher/${id}`
     );
     setTeachers(teachers.filter((teacher) => teacher._id !== id));
   } catch (error) {
