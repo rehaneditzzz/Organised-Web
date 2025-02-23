@@ -10,7 +10,7 @@ const StudList = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/add-student/get");
+        const response = await axios.get("https://organised-web-backend.onrender.com/api/add-student/get");
         setStudents(response.data.students);
         setFilteredStudents(response.data.students); // Initialize filtered list
       } catch (error) {
@@ -36,7 +36,7 @@ const StudList = () => {
  const handleDelete = async (id) => {
   try {
     await axios.delete(
-      `http://localhost:3000/api/add-student/delete-student/${id}`
+      `https://organised-web-backend.onrender.com/api/add-student/delete-student/${id}`
     );
     setStudents(students.filter((student) => student._id !== id));
   } catch (error) {
