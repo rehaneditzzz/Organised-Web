@@ -32,7 +32,7 @@ const UpcomingEventForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/events", {
+      const response = await fetch("https://organised-web-backend.onrender.com/api/events", {
         method: "POST",
         body: formData,
       });
