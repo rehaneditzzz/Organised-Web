@@ -37,7 +37,7 @@ const StudentWidget = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/add-student/add",
+        "https://organised-web-backend.onrender.com/api/add-student/add",
         data
       );
       alert(response.data.message);
