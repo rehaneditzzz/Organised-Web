@@ -35,7 +35,7 @@ const UnderGraduateCourseForm = () => {
 
   const fetchPrograms = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/programs"); // Replace with your backend URL
+      const response = await axios.get("https://organised-web-backend.onrender.com/api/programs"); // Replace with your backend URL
       setPrograms(response.data);
     } catch (error) {
       console.error("Error fetching programs:", error);
@@ -51,7 +51,7 @@ const UnderGraduateCourseForm = () => {
     formData.append("image", data.image[0]);
   
     try {
-      await axios.post("http://localhost:3000/api/programs", formData, {
+      await axios.post("https://organised-web-backend.onrender.com/api/programs", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       reset(); // Reset form fields
